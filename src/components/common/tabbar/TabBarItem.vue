@@ -38,10 +38,10 @@ export default {
   flex: 1;
   text-align: center;
   height: 49px;
+  font-size: 14px;
   }
   .tab-bar-item i {
-    font-size: 28px;
+    font-size: 24px;
     display: block;
-    margin-bottom: -2px;
   }
 </style>

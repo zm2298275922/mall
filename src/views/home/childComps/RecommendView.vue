@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style>
+<style >
   .recommend {
     display: flex;
     justify-content: space-around;
