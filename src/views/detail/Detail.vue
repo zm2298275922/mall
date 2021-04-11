@@ -8,7 +8,7 @@
     <detail-param-info :param-info="paramInfo" />
     <detail-comment-info :comment-info="commentInfo" />
     <goods-list :goods="reCommends"></goods-list>
-    <detail-bottom-bar />
+    <detail-bottom-bar @addCart="addToCart" />
   </div>
 </template>
 
@@ -82,9 +82,23 @@ export default {
 
     // 3.请求推荐数据
     getRecommend().then(res => {
-      console.log(res)
       this.reCommends = res.data.list
     })
+  },
+
+  methods: {
+    addToCart () {
+      // 获取购物车需要展示的信息
+      const product = {}
+      product.image = this.topImages[0]
+      product.title = this.goods.tltle
+      product.desc = this.goods.desc
+      product.price = this.goods.realPrice
+      product.iid = this.iid
+
+      // 将商品添加到购物车里面
+      this.$store.dispatch('addCart', product)
+    }
   }
 }
 </script>

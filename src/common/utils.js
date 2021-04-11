@@ -1,3 +1,14 @@
+// 防抖
+export function debounce (func, delay) {
+  let timer = null
+  return function (...args) {
+    if (timer) clearTimeout(timer)
+    timer = setTimeout(() => {
+      func.apply(this, args)
+    }, delay)
+  }
+}
+
 // 时间日期格式化
 export function formatDate (date, fmt) {
   if (/(y+)/.test(fmt)) {
