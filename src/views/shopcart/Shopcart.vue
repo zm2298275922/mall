@@ -26,8 +26,16 @@ export default {
 </script>
 
 <style scoped>
+#shop-cart {
+  padding-top: 44px;
+}
+
 .nav-bar {
   background-color: var(--color-tint);
   color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
 }
 </style>

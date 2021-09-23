@@ -84,6 +84,7 @@ export default {
       refresh()
     })
   },
+  // 每次激活状态scroll刷新一次
   activated () {
     this.$refs.scroll.refresh()
   },
